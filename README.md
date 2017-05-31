@@ -1,7 +1,6 @@
 # ajs-2.2-currency-converter
 Advanced JavaScript | Workshop 2 Task 2
 
-*Task*
 In the workshop2 folder, you will find a sub-folder called converter. Open converter.html and converter.js in your editor.
 
 This application works, but there is a problem...
