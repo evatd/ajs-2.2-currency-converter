@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Currency Converter</title>
-        <style>
+
+<head>
+    <meta charset="utf-8">
+    <title>Currency Converter</title>
+    <style>
         body {
             font-family: sans-serif;
             font-size: 125%;
             padding: 20px 15%;
         }
-        input, select, button {
+
+        input,
+        select,
+        button {
             font-size: 100%;
-        }    
+        }
+
         .button {
             color: #000;
             background-color: #FFA500;
@@ -21,31 +26,37 @@
             display: inline-block;
             margin-right: 5px;
         }
+
         #result {
             padding: 1em;
             background-color: #eee;
         }
-        </style>
-    </head>
-    <body>
+    </style>
+</head>
 
-        <h1 id="header">Currency Converter</h1>
-        
-        <input value="" id="converter-input" /> GBP in
+<body>
 
-        <select id="converter-currency">
-            <option value="eur">EUR</option>
-            <option value="usd">USD</option>
-            <option value="yen">YEN</option>
-        </select>
-        
-        <span class="button" id="converter-action">Convert</span>
-        
-        <p id="result">
-            <strong>Result:</strong><br /><br />
-            <span id="original-amount">?</span> GBP is <span id="result-amount">?</span>
-        </p>
+    <h1 id="header">Currency Converter</h1>
 
-        <script src="../../Documents/Workshop%202/workshop2%203/converter/converter.js"></script>
-    </body>
+    <input value="" id="converter-input" /> GBP in
+
+    <select id="converter-currency">
+        <option value="eur">EUR</option>
+        <option value="usd">USD</option>
+        <option value="yen">YEN</option>
+    </select>
+
+    <span class="button" id="converter-action">Convert</span>
+
+    <p id="result">
+        <strong>Result:</strong>
+        <br />
+        <br />
+        <span id="original-amount">?</span> GBP is
+        <span id="result-amount">?</span>
+    </p>
+
+    <script src="../../Documents/Workshop%202/workshop2%203/converter/converter.js"></script>
+</body>
+
 </html>
