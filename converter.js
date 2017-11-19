@@ -4,49 +4,42 @@
 // Process: Get a reference to the form button and define rate objects here
 // Define them one after another to avoid writing var twice
 var button = document.getElementById("converter-action");
-    RATES = {
-    eur: 1.27,
-    usd: 1.47,
-    yen: 155.62
+RATES = {
+  eur: 1.27,
+  usd: 1.47,
+  yen: 155.62
 };
 // Event listener for when the button is clicked...
-button.addEventListener(
-    "click",
-    function () {
-        // Call the convert function (see code below)
-        convert();
-    }
-);
+button.addEventListener("click", function() {
+  // Call the convert function (see code below)
+  convert();
+});
 
 /**
- * Currency convertor function
- * This function is executed when the form button is clicked (see listener above)
- * Lots of hard-coded values and element names here... not good practice!
- */
+* Currency convertor function
+* This function is executed when the form button is clicked (see listener above)
+* Lots of hard-coded values and element names here... not good practice!
+*/
 function convert() {
+  var currency,
+    originalAmountValue,
+    convertedCurrency,
+    currencyChoice = document.getElementById("converter-currency"),
+    converterInput = document.getElementById("converter-input"),
+    originalAmount = document.getElementById("original-amount"),
+    resultAmount = document.getElementById("result-amount");
 
-    var currency,
-        originalAmountValue,
-        convertedCurrency,
-        currencyChoice = document.getElementById("converter-currency"),
-        converterInput = document.getElementById("converter-input"),
-        originalAmount = document.getElementById("original-amount"),
-        resultAmount = document.getElementById("result-amount");
+  originalAmountValue = converterInput.value;
+  currency = currencyChoice.value;
 
-    originalAmountValue = converterInput.value;
-    currency = currencyChoice.value;
+  if (currency === "eur") {
+    convertedCurrency = originalAmountValue * RATES.eur;
+  } else if (currency === "usd") {
+    convertedCurrency = originalAmountValue * RATES.usd;
+  } else if (currency === "yen") {
+    convertedCurrency = originalAmountValue * RATES.yen;
+  }
 
-    if (currency === "eur") {
-        convertedCurrency = originalAmountValue * RATES.eur;
-    } else if (currency === "usd") {
-        convertedCurrency = originalAmountValue * RATES.usd;
-    } else if (currency === "yen") {
-        convertedCurrency = originalAmountValue * RATES.yen;
-    }
-
-    originalAmount.textContent = originalAmountValue;
-    resultAmount.textContent = convertedCurrency + " " + currency;
-
+  originalAmount.textContent = originalAmountValue;
+  resultAmount.textContent = convertedCurrency + " " + currency;
 }
-
-
