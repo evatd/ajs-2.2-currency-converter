@@ -1,5 +1,9 @@
 # ajs-2.2-currency-converter
-Advanced JavaScript | Workshop 2 Task 2
+**Advanced JavaScript | Workshop 2 Task 2**
+
+Solution to the following task:
+
+### Task
 
 In the workshop2 folder, you will find a sub-folder called converter. Open converter.html and converter.js in your editor.
 
